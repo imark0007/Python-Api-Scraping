@@ -1,4 +1,4 @@
-# Python-web-scraping
+# Python-Api-Scraping
 
 ## Web Scraping and Automation using Python and tools such as Selenium, BeautifulSoup, and Chromium.
 
