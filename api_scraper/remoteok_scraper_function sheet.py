@@ -19,13 +19,19 @@ REQUEST_HEADER = {
 def get_Job_postings():
     res = requests.get(url=BASE_URL,headers=REQUEST_HEADER)
     return res.json()
-clear
 
 def output_jobs_to_xls(data):
     wb = Workbook()
     job_sheet = wb.add_sheet('Jobs')
     headers = list(data[0].keys())
-    print(headers)
+    for i in range(0, len(headers)):
+        job_sheet.write(0,i,headers[i])
+    for i in range(0, len(data)):
+        job = data[i]
+        values = list(job.values())
+        for x in range(0,len(values)):
+            job_sheet.write(i+1, x, values[x])
+    wb.save('remote_jobs.xls')
     
     
 if __name__ == "__main__":
