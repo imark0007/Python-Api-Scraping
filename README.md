@@ -12,9 +12,7 @@
 
  3. Automating Websites
 
-## By the end of this course, you’ll have mastered the skills required to effectively use Selenium, BeautifulSoup, Chromium and Python to build powerful Web Scrapers and Bots.
-
- + WHAT TOPICS WILL BE COVERED?
+## By the end of this PROJECT, I mastered the skills required to effectively use Selenium, BeautifulSoup, Chromium and Python to build powerful Web Scrapers and Bots.
 
  + Working with Python Requests Module
 
