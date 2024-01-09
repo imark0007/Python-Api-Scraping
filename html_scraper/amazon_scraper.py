@@ -18,7 +18,7 @@ def get_product_price(soup):
     main_price_span = soup.find('span', attrs={
         'class': 'a-price aok-align-center reinventPricePriceToPayMargin priceToPay' 
     })
-    price_spans = main_price_span.findALL('span')
+    price_spans = main_price_span.findAll('span')
     for span in price_spans:
         price = span.text.strip().replace('$','').replace(',', '')
         try:
@@ -40,5 +40,4 @@ if __name__ == "__main__":
        reader = csv.reader(csvfile, delimiter=',')
        for row in reader:
            url = row[0]
-           print(extract_product_info(url))    
-   
+           print(extract_product_info(url))
