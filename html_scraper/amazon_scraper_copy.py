@@ -5,7 +5,7 @@ import bs4
 import concurrent.futures
 from tqdm import tqdm
 
-USER_AGENT = "Mozilla/5.0 (Macintosh; Intel Mac OS X 12_0_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.45 Safari/537.36"
+USER_AGENT = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
 REQUEST_HEADER = {
     'User-Agent': USER_AGENT,
     'Accept-Language': 'en-US, en;q=0.5',
