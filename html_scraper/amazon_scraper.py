@@ -16,7 +16,7 @@ def get_page_html(url):
 
 def get_product_price(soup):
     main_price_span = soup.find('span', attrs={
-        'class': 'a-price aok-align-center reinventPricePriceToPayMargin priceToPay' 
+        'class': 'a-price a-text-price a-size-medium apexPriceToPay' # 1
     })
     price_spans = main_price_span.findAll('span')
     for span in price_spans:
@@ -26,6 +26,10 @@ def get_product_price(soup):
         except ValueError:
             print("Value Obtained for Price Could Not be Parsed")
             exit()
+        
+def get_product_title(soup):
+    product_title = soup.find('span', id='productTitle')
+    return product_title.text.strip()
 
 def extract_product_info(url):
     product_info = {}
