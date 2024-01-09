@@ -68,7 +68,7 @@ def get_product_technical_details(soup):
 
 def extract_product_info(url, output):
     product_info = {}
-    #print(f'Scraping URL: {url}')
+    print(f'Scraping URL: {url}')
     html = get_page_html(url=url)
     soup = bs4.BeautifulSoup(html, 'lxml')
     product_info['price'] = get_product_price(soup)
