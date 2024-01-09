@@ -21,7 +21,11 @@ def get_product_price(soup):
     price_spans = main_price_span.findALL('span')
     for span in price_spans:
         price = span.text.strip().replace('$','').replace(',', '')
-        print(price)
+        try:
+            return float(price)
+        except ValueError:
+            print("Value Obtained for Price Could Not be Parsed")
+            exit()
 
 def extract_product_info(url):
     product_info = {}
@@ -29,6 +33,7 @@ def extract_product_info(url):
     html = get_page_html(url=url)
     soup = bs4.BeautifulSoup(html, 'lxml')
     product_info['price'] = get_product_price(soup)
+    print(product_info)
 
 if __name__ == "__main__":
    with open('amazon_products_urls.csv', newline='') as csvfile:
